@@ -1,0 +1,10 @@
+Name=Welcome!
+NextScene=scene2.scene
+Color=0 80 200
+CameraPosition=0.0 3.0 -15.0
+CameraTarget=0.0 0.0 0.0
+Actors=1
+Actor[0]Name=enemy1.desc
+Actor[0]Type=1
+Actor[0]Position=0.0 0.0 0.0
+Actor[0]Scale=1.0 1.0 1.0

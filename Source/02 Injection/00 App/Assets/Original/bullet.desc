@@ -1,0 +1,4 @@
+Name=Bullet
+HP=10
+Model=bullet.o
+Texture=bullet.img

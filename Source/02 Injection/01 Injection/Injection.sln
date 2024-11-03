@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Injection", "Injection\Injection.vcproj", "{83E82320-5D66-4E98-98F4-3274B982205C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK", "SDK", "{7D51F5F3-9B67-48C1-8BB0-1DA8F0C6A32D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Detours", "Detours\Detours.vcproj", "{534268F0-7DB1-48E3-9685-DAA4BF0A9DF1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D9", "D3D9\D3D9.vcproj", "{E31E3726-57C3-415A-BDFE-C5C4AB0FE4C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83E82320-5D66-4E98-98F4-3274B982205C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{83E82320-5D66-4E98-98F4-3274B982205C}.Debug|Win32.Build.0 = Debug|Win32
+		{83E82320-5D66-4E98-98F4-3274B982205C}.Release|Win32.ActiveCfg = Release|Win32
+		{83E82320-5D66-4E98-98F4-3274B982205C}.Release|Win32.Build.0 = Release|Win32
+		{534268F0-7DB1-48E3-9685-DAA4BF0A9DF1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{534268F0-7DB1-48E3-9685-DAA4BF0A9DF1}.Debug|Win32.Build.0 = Debug|Win32
+		{534268F0-7DB1-48E3-9685-DAA4BF0A9DF1}.Release|Win32.ActiveCfg = Release|Win32
+		{534268F0-7DB1-48E3-9685-DAA4BF0A9DF1}.Release|Win32.Build.0 = Release|Win32
+		{E31E3726-57C3-415A-BDFE-C5C4AB0FE4C0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E31E3726-57C3-415A-BDFE-C5C4AB0FE4C0}.Debug|Win32.Build.0 = Debug|Win32
+		{E31E3726-57C3-415A-BDFE-C5C4AB0FE4C0}.Release|Win32.ActiveCfg = Release|Win32
+		{E31E3726-57C3-415A-BDFE-C5C4AB0FE4C0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{534268F0-7DB1-48E3-9685-DAA4BF0A9DF1} = {7D51F5F3-9B67-48C1-8BB0-1DA8F0C6A32D}
+	EndGlobalSection
+EndGlobal
