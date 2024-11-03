@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cube", "00 Cube\Cube.vcproj", "{53890C96-EAB8-4589-BF72-6CAB560CAE13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 Cube", "00 Cube", "{B6C87112-BB2D-4993-8D8D-3766735DBA63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53890C96-EAB8-4589-BF72-6CAB560CAE13}.Debug|Win32.ActiveCfg = Debug|Win32
+		{53890C96-EAB8-4589-BF72-6CAB560CAE13}.Debug|Win32.Build.0 = Debug|Win32
+		{53890C96-EAB8-4589-BF72-6CAB560CAE13}.Release|Win32.ActiveCfg = Release|Win32
+		{53890C96-EAB8-4589-BF72-6CAB560CAE13}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53890C96-EAB8-4589-BF72-6CAB560CAE13} = {B6C87112-BB2D-4993-8D8D-3766735DBA63}
+	EndGlobalSection
+EndGlobal

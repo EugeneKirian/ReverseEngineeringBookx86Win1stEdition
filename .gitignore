@@ -2,6 +2,7 @@ Debug
 Release
 SDK
 
+*.aps
 *.user
 *.suo
 *.ncb
