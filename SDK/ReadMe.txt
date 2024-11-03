@@ -1,0 +1,1 @@
+This directory contains the third-party tools, libraries, and code needed to compile examples.
