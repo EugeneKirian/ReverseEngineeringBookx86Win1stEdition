@@ -1,0 +1,7 @@
+Debug
+Release
+SDK
+
+*.user
+*.suo
+*.ncb
