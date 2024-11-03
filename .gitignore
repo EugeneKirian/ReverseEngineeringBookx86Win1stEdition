@@ -7,3 +7,8 @@ SDK
 *.user
 *.suo
 *.ncb
+*.err
+*.mk1
+*.sym
+*.lk1
+*.mk

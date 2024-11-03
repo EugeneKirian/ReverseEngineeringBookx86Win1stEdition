@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 CPUID", "00 CPUID", "{7B92A09D-58A9-4013-A486-12980FF49644}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPUID", "00 CPUID\CPUID.vcproj", "{BCA2C524-4F05-44B8-B3F2-ED4BE656A3A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 SIMD", "01 SIMD", "{BB93F628-3A96-4D69-93CB-2E2047A0E11A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MMX", "01 SIMD\MMX\MMX.vcproj", "{229EAF00-49B4-4DAE-9571-88C725C1ED55}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Memory Copy", "01 SIMD\Memory Copy\Memory Copy.vcproj", "{9347A41A-82E8-478F-A4CA-7B64B5B711E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Floating Points Behavior", "02 Floating Points Behavior", "{8C80CD0A-9D7C-4532-9128-1B5BAE145E84}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Floating Points Behavior", "02 Floating Points Behavior\Floating Points Behavior\Floating Points Behavior.vcproj", "{160A8447-ECF3-4064-A79B-10BD8E5796F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCA2C524-4F05-44B8-B3F2-ED4BE656A3A2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BCA2C524-4F05-44B8-B3F2-ED4BE656A3A2}.Debug|Win32.Build.0 = Debug|Win32
+		{BCA2C524-4F05-44B8-B3F2-ED4BE656A3A2}.Release|Win32.ActiveCfg = Release|Win32
+		{BCA2C524-4F05-44B8-B3F2-ED4BE656A3A2}.Release|Win32.Build.0 = Release|Win32
+		{229EAF00-49B4-4DAE-9571-88C725C1ED55}.Debug|Win32.ActiveCfg = Debug|Win32
+		{229EAF00-49B4-4DAE-9571-88C725C1ED55}.Debug|Win32.Build.0 = Debug|Win32
+		{229EAF00-49B4-4DAE-9571-88C725C1ED55}.Release|Win32.ActiveCfg = Release|Win32
+		{229EAF00-49B4-4DAE-9571-88C725C1ED55}.Release|Win32.Build.0 = Release|Win32
+		{9347A41A-82E8-478F-A4CA-7B64B5B711E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9347A41A-82E8-478F-A4CA-7B64B5B711E9}.Debug|Win32.Build.0 = Debug|Win32
+		{9347A41A-82E8-478F-A4CA-7B64B5B711E9}.Release|Win32.ActiveCfg = Release|Win32
+		{9347A41A-82E8-478F-A4CA-7B64B5B711E9}.Release|Win32.Build.0 = Release|Win32
+		{160A8447-ECF3-4064-A79B-10BD8E5796F8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{160A8447-ECF3-4064-A79B-10BD8E5796F8}.Debug|Win32.Build.0 = Debug|Win32
+		{160A8447-ECF3-4064-A79B-10BD8E5796F8}.Release|Win32.ActiveCfg = Release|Win32
+		{160A8447-ECF3-4064-A79B-10BD8E5796F8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BCA2C524-4F05-44B8-B3F2-ED4BE656A3A2} = {7B92A09D-58A9-4013-A486-12980FF49644}
+		{229EAF00-49B4-4DAE-9571-88C725C1ED55} = {BB93F628-3A96-4D69-93CB-2E2047A0E11A}
+		{9347A41A-82E8-478F-A4CA-7B64B5B711E9} = {BB93F628-3A96-4D69-93CB-2E2047A0E11A}
+		{160A8447-ECF3-4064-A79B-10BD8E5796F8} = {8C80CD0A-9D7C-4532-9128-1B5BAE145E84}
+	EndGlobalSection
+EndGlobal

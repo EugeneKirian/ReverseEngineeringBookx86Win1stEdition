@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 Resources Application", "00 Resources Application", "{728D5C01-39E1-418C-9098-2DDFF9E8B8D9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Resources Application", "00 Resources Application\Resources Application.vcproj", "{BAFF4E95-B80A-4D2F-9A02-3BB263F67372}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Resources Library", "01 Resources Library", "{49AF9BB5-9482-474F-B8BA-31E2E02E392E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Resources Library", "01 Resources Library\Resources Library\Resources Library.vcproj", "{B41E00B9-EF64-4769-A33E-C5FDDB3817AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 MFC Application", "02 MFC Application", "{B8B454BA-0598-4660-9EA8-90E7CB0D11F0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC", "02 MFC Application\MFC\MFC.vcproj", "{17E895CD-6EA3-486B-A98C-E2BF109BF1EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAFF4E95-B80A-4D2F-9A02-3BB263F67372}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BAFF4E95-B80A-4D2F-9A02-3BB263F67372}.Debug|Win32.Build.0 = Debug|Win32
+		{BAFF4E95-B80A-4D2F-9A02-3BB263F67372}.Release|Win32.ActiveCfg = Release|Win32
+		{BAFF4E95-B80A-4D2F-9A02-3BB263F67372}.Release|Win32.Build.0 = Release|Win32
+		{B41E00B9-EF64-4769-A33E-C5FDDB3817AD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B41E00B9-EF64-4769-A33E-C5FDDB3817AD}.Debug|Win32.Build.0 = Debug|Win32
+		{B41E00B9-EF64-4769-A33E-C5FDDB3817AD}.Release|Win32.ActiveCfg = Release|Win32
+		{B41E00B9-EF64-4769-A33E-C5FDDB3817AD}.Release|Win32.Build.0 = Release|Win32
+		{17E895CD-6EA3-486B-A98C-E2BF109BF1EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{17E895CD-6EA3-486B-A98C-E2BF109BF1EB}.Debug|Win32.Build.0 = Debug|Win32
+		{17E895CD-6EA3-486B-A98C-E2BF109BF1EB}.Release|Win32.ActiveCfg = Release|Win32
+		{17E895CD-6EA3-486B-A98C-E2BF109BF1EB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BAFF4E95-B80A-4D2F-9A02-3BB263F67372} = {728D5C01-39E1-418C-9098-2DDFF9E8B8D9}
+		{B41E00B9-EF64-4769-A33E-C5FDDB3817AD} = {49AF9BB5-9482-474F-B8BA-31E2E02E392E}
+		{17E895CD-6EA3-486B-A98C-E2BF109BF1EB} = {B8B454BA-0598-4660-9EA8-90E7CB0D11F0}
+	EndGlobalSection
+EndGlobal
