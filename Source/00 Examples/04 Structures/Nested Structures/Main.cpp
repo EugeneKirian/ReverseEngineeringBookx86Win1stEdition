@@ -132,10 +132,37 @@ void extended_file_system_structure_example()
     }
 }
 
+struct large_structure
+{
+    SYSTEMTIME UTC;
+    SYSTEMTIME Local;
+};
+
+void print_large_structure(large_structure value)
+{
+    printf("UTC: %d-%d-%d %d:%d:%d\n",
+        value.UTC.wYear, value.UTC.wMonth, value.UTC.wDay,
+        value.UTC.wHour, value.UTC.wMinute, value.UTC.wSecond);
+    printf("Local: %d-%d-%d %d:%d:%d\n",
+        value.Local.wYear, value.Local.wMonth, value.Local.wDay,
+        value.Local.wHour, value.Local.wMinute, value.Local.wSecond);
+}
+
+void large_structure_value_example()
+{
+    large_structure value;
+
+    GetSystemTime(&value.UTC);
+    GetLocalTime(&value.Local);
+
+    print_large_structure(value);
+}
+
 int main(int argc, char** argv)
 {
     nested_structure_copy_example();
     extended_file_system_structure_example();
+    large_structure_value_example();
 
     return 0;
 }
