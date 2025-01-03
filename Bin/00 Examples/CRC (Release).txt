@@ -1,0 +1,25 @@
+Checksum for Basics.exe is b8157a4f
+Checksum for Nested Loops.exe is 52e7e2cb
+Checksum for Simple Loops.exe is 33c26709
+Checksum for Built-In Functions (Static).exe is 80861a2b
+Checksum for Built-In Functions.exe is f6b69fbf
+Checksum for Custom Functions (Static).exe is f7bdf588
+Checksum for Custom Functions.exe is 4032f944
+Checksum for Arrays.exe is f6de7d7
+Checksum for Nested Structures.exe is 2a62bf8d
+Checksum for Simple Structures.exe is 60f01da0
+Checksum for Unions.exe is a92ec3d
+Checksum for Bit Operations.exe is 209929ef
+Checksum for Switch Statements.exe is 180e1943
+Checksum for Basic Strings (Static).exe is 7c58990e
+Checksum for Basic Strings (VC6).exe is 16b5d755
+Checksum for Basic Strings.exe is 97fec113
+Checksum for Wide Strings (Static).exe is 86b1c537
+Checksum for Wide Strings.exe is 6d260566
+Checksum for Memory Management (Static).exe is 15fd0b38
+Checksum for Memory Management.exe is 67a93412
+Checksum for Memory Manipulation (Static).exe is 347959df
+Checksum for Memory Manipulation (VC6).exe is 2b25f23f
+Checksum for Memory Manipulation.exe is e3c51365
+Checksum for Basic Files (Static).exe is 15561a2e
+Checksum for Basic Files.exe is cc8c92a6

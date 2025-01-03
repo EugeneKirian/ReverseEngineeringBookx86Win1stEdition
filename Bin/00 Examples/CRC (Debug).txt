@@ -1,0 +1,23 @@
+Checksum for Basics (Debug).exe is 7f7aed32
+Checksum for Nested Loops (Debug).exe is 57559001
+Checksum for Simple Loops (Debug).exe is ccb6233f
+Checksum for Built-In Functions (Debug).exe is ed1a1fd4
+Checksum for Built-In Functions (Static) (Debug).exe is fd74fde5
+Checksum for Custom Functions (Static) (Debug).exe is 441e19ac
+Checksum for Custom Functions (Debug).exe is 8eb8e3d6
+Checksum for Arrays (Debug).exe is 290ea6bb
+Checksum for Nested Structures (Debug).exe is 19228ccf
+Checksum for Simple Structures (Debug).exe is dade93e7
+Checksum for Unions (Debug).exe is 790edd
+Checksum for Bit Operations (Debug).exe is d61765d1
+Checksum for Switch Statements (Debug).exe is 67e248
+Checksum for Basic Strings (Debug).exe is 486c8843
+Checksum for Basic Strings (Static) (Debug).exe is 1da5cdf0
+Checksum for Wide Strings (Debug).exe is f2591fd
+Checksum for Wide Strings (Static) (Debug).exe is 90cf1fc2
+Checksum for Memory Management (Debug).exe is 6df0007e
+Checksum for Memory Management (Static) (Debug).exe is 1739e64a
+Checksum for Memory Manipulation (Debug).exe is a1d8c222
+Checksum for Memory Manipulation (Static) (Debug).exe is 19dd160e
+Checksum for Basic Files (Debug).exe is 21d6e5ef
+Checksum for Basic Files (Static) (Debug).exe is 6a632654
