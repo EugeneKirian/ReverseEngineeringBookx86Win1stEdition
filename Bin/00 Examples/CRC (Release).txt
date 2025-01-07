@@ -23,3 +23,5 @@ Checksum for Memory Manipulation (VC6).exe is 2b25f23f
 Checksum for Memory Manipulation.exe is e3c51365
 Checksum for Basic Files (Static).exe is 15561a2e
 Checksum for Basic Files.exe is cc8c92a6
+Checksum for Real Numbers (Static).exe is d91c8b38
+Checksum for Real Numbers.exe is 5b7833a
