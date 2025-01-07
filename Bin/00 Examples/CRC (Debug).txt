@@ -23,3 +23,4 @@ Checksum for Basic Files (Debug).exe is 21d6e5ef
 Checksum for Basic Files (Static) (Debug).exe is 6a632654
 Checksum for Real Numbers (Debug).exe is 3e5e7a22
 Checksum for Real Numbers (Static) (Debug).exe is ff848800
+Checksum for Function Pointers (Debug).exe is c4c030e2
