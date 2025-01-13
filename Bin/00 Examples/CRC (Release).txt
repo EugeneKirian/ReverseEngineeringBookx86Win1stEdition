@@ -26,3 +26,7 @@ Checksum for Basic Files.exe is cc8c92a6
 Checksum for Real Numbers (Static).exe is d91c8b38
 Checksum for Real Numbers.exe is 5b7833a
 Checksum for Function Pointers.exe is 87497ee9
+Checksum for Advanced Classes (VC6).exe is d2aa3b04
+Checksum for Advanced Classes.exe is 650a0531
+Checksum for Basic Classes (VC6).exe is b0d3a3c0
+Checksum for Basic Classes.exe is ad3e1071
