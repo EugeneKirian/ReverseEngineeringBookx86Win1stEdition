@@ -30,3 +30,5 @@ Checksum for Advanced Classes (VC6).exe is d2aa3b04
 Checksum for Advanced Classes.exe is 650a0531
 Checksum for Basic Classes (VC6).exe is b0d3a3c0
 Checksum for Basic Classes.exe is ad3e1071
+Checksum for Class Casting (VC6).exe is ac4e7547
+Checksum for Class Casting.exe is 6c1f517b
