@@ -32,3 +32,5 @@ Checksum for Basic Classes (VC6).exe is b0d3a3c0
 Checksum for Basic Classes.exe is ad3e1071
 Checksum for Class Casting (VC6).exe is ac4e7547
 Checksum for Class Casting.exe is 6c1f517b
+Checksum for Multiple Inheritance (Debug).exe is d992b51
+Checksum for Multiple Inheritance (VC6).exe is c617ffc9

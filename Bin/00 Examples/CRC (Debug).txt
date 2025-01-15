@@ -27,3 +27,4 @@ Checksum for Function Pointers (Debug).exe is c4c030e2
 Checksum for Advanced Classes (Debug).exe is e87ddcb
 Checksum for Basic Classes (Debug).exe is 507b703f
 Checksum for Class Casting (Debug).exe is 3df82dbf
+Checksum for Multiple Inheritance (Debug).exe is d992b51
