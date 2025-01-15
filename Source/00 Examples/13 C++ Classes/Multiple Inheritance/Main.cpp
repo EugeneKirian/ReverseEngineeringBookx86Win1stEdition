@@ -25,7 +25,7 @@ SOFTWARE.
 
 #include <stdio.h>
 
-int main(int argc, char** argv)
+void button_example()
 {
     Button* button = new Button();
 
@@ -37,6 +37,26 @@ int main(int argc, char** argv)
         button->GetX(), button->GetY());
 
     delete button;
+}
+
+void image_example()
+{
+    Image* image = new Image();
+
+    image->SetImage("image.jpg");
+    image->SetX(image->GetX() + 20);
+    image->SetY(image->GetY() + 50);
+
+    printf("Image X: %d, Y: %d\n",
+        image->GetX(), image->GetY());
+
+    delete image;
+}
+
+int main(int argc, char** argv)
+{
+    button_example();
+    image_example();
 
     return 0;
 }

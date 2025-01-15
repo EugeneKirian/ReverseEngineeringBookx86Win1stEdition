@@ -29,7 +29,7 @@ SOFTWARE.
 
 #define MAX_IMAGE_PATH_LENGTH   MAX_PATH
 
-class Image : public Control, public Target
+class Image : public Target, public Control
 {
 protected:
     char m_path[MAX_IMAGE_PATH_LENGTH];

@@ -25,7 +25,7 @@ SOFTWARE.
 Target::Target()
 {
     this->m_x = this->m_y
-        = this->m_width = this->m_width = 0;
+        = this->m_width = this->m_height = 0;
 }
 
 signed Target::GetX()
