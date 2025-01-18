@@ -28,3 +28,9 @@ Checksum for Advanced Classes (Debug).exe is e87ddcb
 Checksum for Basic Classes (Debug).exe is 507b703f
 Checksum for Class Casting (Debug).exe is 3df82dbf
 Checksum for Multiple Inheritance (Debug).exe is d992b51
+Checksum for Custom Operators (Debug).exe is 2bd74dcf
+Checksum for Custom Operators (VC6) (Debug).exe is b4bd480c
+Checksum for Memory Operators (Debug).exe is 52eac77f
+Checksum for Memory Operators (VC6) (Debug).exe is 20011eaf
+Checksum for Exceptions (Debug).exe is d37cef6e
+Checksum for Exceptions (VC6) (Debug).exe is b8261106

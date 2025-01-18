@@ -34,3 +34,9 @@ Checksum for Class Casting (VC6).exe is ac4e7547
 Checksum for Class Casting.exe is 6c1f517b
 Checksum for Multiple Inheritance (Debug).exe is d992b51
 Checksum for Multiple Inheritance (VC6).exe is c617ffc9
+Checksum for Custom Operators (VC6).exe is 3aac597b
+Checksum for Custom Operators.exe is aa617672
+Checksum for Memory Operators (VC6).exe is 49b10cac
+Checksum for Memory Operators.exe is 59b48900
+Checksum for Exceptions (VC6).exe is a4decd88
+Checksum for Exceptions.exe is 640e4cc5
