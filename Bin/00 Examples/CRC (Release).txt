@@ -40,3 +40,5 @@ Checksum for Memory Operators (VC6).exe is 49b10cac
 Checksum for Memory Operators.exe is 59b48900
 Checksum for Exceptions (VC6).exe is a4decd88
 Checksum for Exceptions.exe is 640e4cc5
+Checksum for C++ Strings (VC6).exe is 812c0f62
+Checksum for C++ Strings.exe is a6475401

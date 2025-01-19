@@ -34,3 +34,5 @@ Checksum for Memory Operators (Debug).exe is 52eac77f
 Checksum for Memory Operators (VC6) (Debug).exe is 20011eaf
 Checksum for Exceptions (Debug).exe is d37cef6e
 Checksum for Exceptions (VC6) (Debug).exe is b8261106
+Checksum for C++ Strings (Debug).exe is 49ae9e5c
+Checksum for C++ Strings (VC6) (Debug).exe is dbd9c14b
