@@ -36,3 +36,5 @@ Checksum for Exceptions (Debug).exe is d37cef6e
 Checksum for Exceptions (VC6) (Debug).exe is b8261106
 Checksum for C++ Strings (Debug).exe is 49ae9e5c
 Checksum for C++ Strings (VC6) (Debug).exe is dbd9c14b
+Checksum for C++ Vectors (Debug).exe is 352c6f80
+Checksum for C++ Vectors (VC6) (Debug).exe is 3cb9fea

@@ -42,3 +42,5 @@ Checksum for Exceptions (VC6).exe is a4decd88
 Checksum for Exceptions.exe is 640e4cc5
 Checksum for C++ Strings (VC6).exe is 812c0f62
 Checksum for C++ Strings.exe is a6475401
+Checksum for C++ Vectors (VC6).exe is 49610563
+Checksum for C++ Vectors.exe is 2d5ca338
