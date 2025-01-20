@@ -24,5 +24,5 @@ SOFTWARE.
 
 int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
 {
-    return MessageBoxA(NULL, "Windows Applicatiop", "Message", MB_OK);
+    return MessageBoxA(NULL, "Windows Application", "Message", MB_OK);
 }

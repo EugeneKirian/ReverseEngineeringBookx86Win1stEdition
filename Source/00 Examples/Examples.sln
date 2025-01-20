@@ -93,7 +93,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "18 C++ Streams", "18 C++ St
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C++ Input Streams", "18 C++ Streams\C++ Input Streams\C++ Input Streams.vcproj", "{05C9B9EE-DE96-4CE5-8D6F-59F30615131E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C++ Output String", "18 C++ Streams\C++ Output String\C++ Output String.vcproj", "{396E7865-678F-4351-9565-4E87F938DF81}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C++ Output Streams", "18 C++ Streams\C++ Output Streams\C++ Output Streams.vcproj", "{396E7865-678F-4351-9565-4E87F938DF81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "19 Entry Points", "19 Entry Points", "{4D97D6BE-9E94-4469-9F17-E4F1E276D518}"
 EndProject

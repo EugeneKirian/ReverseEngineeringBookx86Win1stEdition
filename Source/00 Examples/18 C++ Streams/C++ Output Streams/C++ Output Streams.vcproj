@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="C++ Output String"
+	Name="C++ Output Streams"
 	ProjectGUID="{396E7865-678F-4351-9565-4E87F938DF81}"
-	RootNamespace="COutputString"
+	RootNamespace="COutputStreams"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
