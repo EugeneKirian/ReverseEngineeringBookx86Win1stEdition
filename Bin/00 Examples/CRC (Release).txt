@@ -44,3 +44,13 @@ Checksum for C++ Strings (VC6).exe is 812c0f62
 Checksum for C++ Strings.exe is a6475401
 Checksum for C++ Vectors (VC6).exe is 49610563
 Checksum for C++ Vectors.exe is 2d5ca338
+Checksum for C++ Input Streams (Static).exe is 22fcc92d
+Checksum for C++ Input Streams (VC6).exe is 1cfccaa8
+Checksum for C++ Input Streams.exe is 63104245
+Checksum for C++ Output Streams (Static).exe is a53d4c49
+Checksum for C++ Output Streams (VC6).exe is 7313b92a
+Checksum for C++ Output Streams.exe is 7441b65e
+Checksum for Console.exe is 3f0e05da
+Checksum for Windows.exe is 4c6a8f25
+Checksum for Buffer Overruns.exe is 136f146a
+Checksum for Stack Frames.exe is 3e7cd2e7

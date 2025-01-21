@@ -38,3 +38,13 @@ Checksum for C++ Strings (Debug).exe is 49ae9e5c
 Checksum for C++ Strings (VC6) (Debug).exe is dbd9c14b
 Checksum for C++ Vectors (Debug).exe is 352c6f80
 Checksum for C++ Vectors (VC6) (Debug).exe is 3cb9fea
+Checksum for C++ Input Streams (Debug).exe is 74e391
+Checksum for C++ Input Streams (Static) (Debug).exe is 24aea3c0
+Checksum for C++ Input Streams (VC6) (Debug).exe is 89615d92
+Checksum for C++ Output Streams (Debug).exe is b8b33b32
+Checksum for C++ Output Streams (Static) (Debug).exe is e192d29a
+Checksum for C++ Output Streams (VC6) (Debug).exe is 2a5e17b8
+Checksum for Console (Debug).exe is 67c561e
+Checksum for Windows (Debug).exe is ff12da9d
+Checksum for Buffer Overruns (Debug).exe is 2f8a99d2
+Checksum for Stack Frames (Debug).exe is e2288b7d
