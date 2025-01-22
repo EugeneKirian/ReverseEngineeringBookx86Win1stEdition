@@ -54,3 +54,5 @@ Checksum for Console.exe is 3f0e05da
 Checksum for Windows.exe is 4c6a8f25
 Checksum for Buffer Overruns.exe is 136f146a
 Checksum for Stack Frames.exe is 3e7cd2e7
+Checksum for Stack Allocation (VC6).exe is 6086d9b0
+Checksum for Stack Allocation.exe is 94f1781a

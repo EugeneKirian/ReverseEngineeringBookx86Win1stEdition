@@ -27,20 +27,35 @@ SOFTWARE.
 
 #include <windows.h>
 
-int main(int argc, char** argv)
+void stack_example_basic()
 {
-    char* path = (char*)_alloca(MAX_PATH);
+    char path[1024 * 10];
+
+    GetWindowsDirectoryA(path, MAX_PATH);
+
+    printf("%s", path);
+}
+
+void stack_example_function()
+{
+    char* path = (char*)_alloca(MAX_PATH * 2);
 
     if (path == NULL)
     {
         printf("Unable to allocate memory on stack.\n");
 
-        return -1;
+        return;
     }
 
     GetWindowsDirectoryA(path, MAX_PATH);
 
     printf("%s", path);
+}
+
+int main(int argc, char** argv)
+{
+    stack_example_basic();
+    stack_example_function();
 
     return 0;
 }

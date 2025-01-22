@@ -20,50 +20,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include <stdio.h>
-
 #include <windows.h>
 
-int main(int argc, char** argv)
+void at_exit_example(void)
 {
+    MessageBoxA(NULL, "At Exit!", "At Exit!", MB_OK);
+}
+
+BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved )
+{
+    if (DLL_PROCESS_ATTACH == fdwReason)
     {
-        int values[7];
-
-        for (int i = 0; i < 7; i++)
-        {
-            values[i] = i * i * i;
-        }
-
-        for (int i = 0; i < 7; i++)
-        {
-            printf("%d ", values[i]);
-        }
-
-        printf("\n");
+        atexit(at_exit_example);
     }
 
-    {
-        char path[MAX_PATH];
-        GetCurrentDirectoryA(MAX_PATH, path);
-
-        printf("%s\n", path);
-    }
-
-    {
-        float values[19];
-        
-        for (int i = 0; i < 7; i++)
-        {
-            values[i] = (float)(i * i * i);
-        }
-
-        for (int i = 0; i < 7; i++)
-        {
-            printf("%f ", values[i]);
-        }
-
-        printf("\n");
-    }
-
-    return 0;
+    return TRUE;
 }

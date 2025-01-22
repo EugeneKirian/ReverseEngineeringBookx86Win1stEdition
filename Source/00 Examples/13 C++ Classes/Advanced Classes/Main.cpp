@@ -39,7 +39,8 @@ int stack_class_example(const char* path)
 
 void stack_class_examples()
 {
-    printf("Size of %s is %d\n", typeid(RealFile).name(), sizeof(RealFile));
+    printf("Size of %s is %d\n",
+        typeid(RealFile).name(), sizeof(RealFile));
 
     static char* files[] =
     {

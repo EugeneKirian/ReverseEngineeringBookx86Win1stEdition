@@ -48,3 +48,5 @@ Checksum for Console (Debug).exe is 67c561e
 Checksum for Windows (Debug).exe is ff12da9d
 Checksum for Buffer Overruns (Debug).exe is 2f8a99d2
 Checksum for Stack Frames (Debug).exe is e2288b7d
+Checksum for Stack Allocation (Debug).exe is f92b2836
+Checksum for Stack Allocation (VC6) (Debug).exe is 62a8909c
