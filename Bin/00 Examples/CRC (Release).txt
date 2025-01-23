@@ -56,3 +56,8 @@ Checksum for Buffer Overruns.exe is 136f146a
 Checksum for Stack Frames.exe is 3e7cd2e7
 Checksum for Stack Allocation (VC6).exe is 6086d9b0
 Checksum for Stack Allocation.exe is 94f1781a
+Checksum for Scopes.exe is 443d7b4b
+Checksum for At Exit.exe is 776049f4
+Checksum for Random (Static).exe is a1fa4bb3
+Checksum for Random.exe is f4f6e495
+Checksum for Checksum.exe is f7bb2a8e

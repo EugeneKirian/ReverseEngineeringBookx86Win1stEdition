@@ -50,3 +50,8 @@ Checksum for Buffer Overruns (Debug).exe is 2f8a99d2
 Checksum for Stack Frames (Debug).exe is e2288b7d
 Checksum for Stack Allocation (Debug).exe is f92b2836
 Checksum for Stack Allocation (VC6) (Debug).exe is 62a8909c
+Checksum for Scopes (Debug).exe is 5d1bc689
+Checksum for At Exit (Debug).exe is e340e2b0
+Checksum for Random (Debug).exe is 87a0dc0e
+Checksum for Random (Static) (Debug).exe is 1fd1b4ef
+Checksum for Checksum (Debug).exe is 1c8d7fd0

@@ -127,13 +127,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "23 At Exit", "23 At Exit", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "At Exit", "23 At Exit\At Exit\At Exit.vcproj", "{69387155-4387-4911-8EAD-2F7AC4CAED7C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library Exit", "23 At Exit\Library Exit\Library Exit.vcproj", "{54AEAABC-E8DD-4154-8C63-8317B0923D33}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "24 Other", "24 Other", "{8902ED27-B755-4A80-BF4B-2019F5E14183}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Checksum", "24 Other\Checksum\Checksum.vcproj", "{9308258C-9FB0-40B5-8091-516524F151E8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Random", "24 Other\Random\Random.vcproj", "{B2EC096A-9C3A-4830-8B99-24340EF29790}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library Exit", "23 At Exit\Library Exit\Library Exit.vcproj", "{54AEAABC-E8DD-4154-8C63-8317B0923D33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
