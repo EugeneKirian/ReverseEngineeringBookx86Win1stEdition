@@ -101,7 +101,7 @@ HRESULT CreateAssets(LPCSTR lpszPath, LPASSETS* lpAssets)
                 strcpy_s(assets->Items[indx].Name, MAX_PATH, ffd.cFileName);
             }
         }
-    } while (FindNextFile(hFind, &ffd) != 0);
+    } while (FindNextFileA(hFind, &ffd) != 0);
 
     FindClose(hFind);
 

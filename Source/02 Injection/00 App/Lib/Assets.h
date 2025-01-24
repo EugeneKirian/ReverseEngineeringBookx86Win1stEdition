@@ -22,7 +22,10 @@ SOFTWARE.
 
 #pragma once
 
-#include "Base.h"
+#include <windows.h>
+
+#define STATIC      static
+#define INLINE      inline
 
 #define A_OK                S_OK
 #define AERR_GENERIC        E_FAIL

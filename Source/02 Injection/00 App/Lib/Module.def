@@ -1,0 +1,6 @@
+LIBRARY
+EXPORTS
+	CreateAssets
+	GetAssetsContent
+	GetAssetsContentContent
+	ReleaseAssets
