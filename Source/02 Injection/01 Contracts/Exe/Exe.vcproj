@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="Lib"
-	ProjectGUID="{1280AF53-497F-46F0-8F53-E37379B2FBC6}"
-	RootNamespace="Lib"
+	Name="Exe"
+	ProjectGUID="{A5812E9F-8A2E-4AE4-B832-7B0E5D5F698E}"
+	RootNamespace="Exe"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -19,8 +19,8 @@
 			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="2"
-			CharacterSet="0"
+			ConfigurationType="1"
+			CharacterSet="1"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -40,19 +40,14 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				OmitFramePointers="true"
-				AdditionalIncludeDirectories="..\..\03 Tools\libarc;"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;LIB_EXPORTS"
+				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
-				ExceptionHandling="0"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
-				BufferSecurityCheck="false"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
-				DisableSpecificWarnings="4229"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -66,9 +61,8 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="2"
-				ModuleDefinitionFile="Module.def"
 				GenerateDebugInformation="true"
-				SubSystem="2"
+				SubSystem="1"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -100,8 +94,8 @@
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="2"
-			CharacterSet="0"
+			ConfigurationType="1"
+			CharacterSet="1"
 			WholeProgramOptimization="1"
 			>
 			<Tool
@@ -121,17 +115,12 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				OmitFramePointers="true"
-				AdditionalIncludeDirectories="..\..\03 Tools\libarc;"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;LIB_EXPORTS"
-				ExceptionHandling="0"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="2"
-				BufferSecurityCheck="false"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="3"
-				DisableSpecificWarnings="4229"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -145,9 +134,8 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="1"
-				ModuleDefinitionFile="Module.def"
 				GenerateDebugInformation="true"
-				SubSystem="2"
+				SubSystem="1"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
 				TargetMachine="1"
@@ -179,14 +167,6 @@
 		</Configuration>
 	</Configurations>
 	<References>
-		<ProjectReference
-			ReferencedProjectIdentifier="{083039A6-E42C-4CD8-8F67-77E8FBA885FE}"
-			RelativePathToProject="..\03 Tools\libarc\libarc.vcproj"
-		/>
-		<ProjectReference
-			ReferencedProjectIdentifier="{54C60A14-3D35-4AA1-B1E6-63AE404DFB01}"
-			RelativePathToProject="..\03 Tools\libimg\libimg.vcproj"
-		/>
 	</References>
 	<Files>
 		<Filter
@@ -195,11 +175,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\Assets.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Module.def"
+				RelativePath=".\Main.cpp"
 				>
 			</File>
 		</Filter>
@@ -208,10 +184,6 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
-			<File
-				RelativePath=".\Assets.h"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="Resource Files"

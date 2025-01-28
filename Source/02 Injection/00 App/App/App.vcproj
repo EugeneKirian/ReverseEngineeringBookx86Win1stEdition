@@ -41,7 +41,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				OmitFramePointers="true"
-				AdditionalIncludeDirectories="..\..\..\..\SDK\DX90\Include;..\Lib;..\..\02 Tools\libimg;"
+				AdditionalIncludeDirectories="..\..\..\..\SDK\DX90\Include;..\Lib;..\..\03 Tools\libimg;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				ExceptionHandling="0"
@@ -123,7 +123,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				OmitFramePointers="true"
-				AdditionalIncludeDirectories="..\..\..\..\SDK\DX90\Include;..\Lib;..\..\02 Tools\libimg;"
+				AdditionalIncludeDirectories="..\..\..\..\SDK\DX90\Include;..\Lib;..\..\03 Tools\libimg;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				ExceptionHandling="0"
 				RuntimeLibrary="2"

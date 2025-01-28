@@ -12,23 +12,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK", "SDK", "{526CE91D-7A0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{3465FED6-0D4E-4003-A6A4-B2F363B84CFF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\02 Tools\zlib\zlib.vcproj", "{05737976-ADA7-4F89-9126-69733B73805F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\03 Tools\zlib\zlib.vcproj", "{05737976-ADA7-4F89-9126-69733B73805F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libarc", "..\02 Tools\libarc\libarc.vcproj", "{083039A6-E42C-4CD8-8F67-77E8FBA885FE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libarc", "..\03 Tools\libarc\libarc.vcproj", "{083039A6-E42C-4CD8-8F67-77E8FBA885FE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libimg", "..\02 Tools\libimg\libimg.vcproj", "{54C60A14-3D35-4AA1-B1E6-63AE404DFB01}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libimg", "..\03 Tools\libimg\libimg.vcproj", "{54C60A14-3D35-4AA1-B1E6-63AE404DFB01}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arc", "..\02 Tools\arc\arc.vcproj", "{7E0D3F92-5D8B-497D-ADCE-9EE92B3C4CFE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arc", "..\03 Tools\arc\arc.vcproj", "{7E0D3F92-5D8B-497D-ADCE-9EE92B3C4CFE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "img", "..\02 Tools\img\img.vcproj", "{ADBD0FAC-E34F-4A32-96B9-55D21AAD2366}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "img", "..\03 Tools\img\img.vcproj", "{ADBD0FAC-E34F-4A32-96B9-55D21AAD2366}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unarc", "..\02 Tools\unarc\unarc.vcproj", "{064944F3-7535-45A1-B350-6CAF008A819F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unarc", "..\03 Tools\unarc\unarc.vcproj", "{064944F3-7535-45A1-B350-6CAF008A819F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unimg", "..\02 Tools\unimg\unimg.vcproj", "{C600EB25-E74B-4F81-B6C3-9356A7B5F45A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unimg", "..\03 Tools\unimg\unimg.vcproj", "{C600EB25-E74B-4F81-B6C3-9356A7B5F45A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libobj", "..\02 Tools\libobj\libobj.vcproj", "{01B1C6BC-EFE5-4F85-BDC6-56EAF650EC16}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libobj", "..\03 Tools\libobj\libobj.vcproj", "{01B1C6BC-EFE5-4F85-BDC6-56EAF650EC16}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "o", "..\02 Tools\o\o.vcproj", "{E344F163-299E-4F83-89D5-C7B3CE9BD200}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "o", "..\03 Tools\o\o.vcproj", "{E344F163-299E-4F83-89D5-C7B3CE9BD200}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{4A2FAC60-ED59-4C4E-819B-2288FA4D682D}"
 EndProject
