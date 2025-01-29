@@ -20,10 +20,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#include <stdio.h>
+
 extern "C"
-__declspec(dllexport) int __cdecl exported(void)
+__declspec(dllexport) int __cdecl number(void)
 {
     return 123456;
+}
+
+extern "C"
+__declspec(dllexport) int __cdecl print(const char* str)
+{
+    return printf("Print: %s\n", str);
 }
 
 int main(int argc, char** argv)

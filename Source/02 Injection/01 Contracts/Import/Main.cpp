@@ -25,7 +25,8 @@ SOFTWARE.
 
 #include <windows.h>
 
-typedef int (__cdecl * PFNEXEFUNC)(void);
+typedef int (__cdecl * PFNNUMBER)(void);
+typedef int (__cdecl * PFNPRINT)(const char* str);
 
 int main(int argc, char** argv)
 {
@@ -43,9 +44,14 @@ int main(int argc, char** argv)
         return EXIT_FAILURE;
     }
 
-    PFNEXEFUNC func = (PFNEXEFUNC)GetProcAddress(module, "exported");
+    PFNNUMBER num = (PFNNUMBER)GetProcAddress(module, "number");
 
-    printf("Value: %d\n", func());
+    printf("Value: %d\n", num());
+
+    
+    PFNPRINT print = (PFNPRINT)GetProcAddress(module, "print");
+
+    print("Print Test...");
 
     FreeLibrary(module);
 
