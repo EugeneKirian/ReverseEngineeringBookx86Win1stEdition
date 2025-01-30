@@ -25,34 +25,80 @@ SOFTWARE.
 
 #include <windows.h>
 
-typedef int (__cdecl * PFNNUMBER)(void);
-typedef int (__cdecl * PFNPRINT)(const char* str);
+HMODULE dll;
+
+int fun_10001440(const char* path, void** pointer)
+{
+    int result = 0;
+
+    __asm
+    {
+        xor ebx, ebx;
+        add ebx, dll;
+        add ebx, 0x00001440;
+
+        push pointer;   // The second argument.
+
+        mov eax, path;  // The first argument.
+
+        call ebx;       // Function call.
+        add esp, 0x4;   // Clean-up the stack.
+
+        mov result, eax;
+    }
+
+    return result;
+}
+
+int fun_10001760(void* pointer)
+{
+    int result = 0;
+
+    __asm
+    {
+        xor eax, eax;
+        add eax, dll;
+        add eax, 0x00001760;
+
+        mov esi, pointer;   // Function argument.
+
+        call eax;           // Function call.
+
+        mov result, eax;
+    }
+
+    return result;
+}
+
+void execute_library_functions(char* path)
+{
+    void* ptr = NULL;
+
+    printf("Calling init private function %d\n", fun_10001440(path, &ptr));
+    printf("Calling release private function %d\n", fun_10001760(ptr));
+}
 
 int main(int argc, char** argv)
 {
-    if (argc < 2)
+    if (argc < 3)
     {
-        printf("Usage: import.exe <exe file>\n");
+        printf("Usage: trampoline.exe <dll file> <data file>\n");
         return EXIT_FAILURE;
     }
 
-    HMODULE module = LoadLibraryA(argv[1]);
+    dll = LoadLibraryA(argv[1]);
 
-    if (module == NULL)
+    if (dll == NULL)
     {
         printf("Unable to load %s\n", argv[1]);
         return EXIT_FAILURE;
     }
 
-    PFNNUMBER num = (PFNNUMBER)GetProcAddress(module, "number");
+    execute_library_functions(argv[2]);
 
-    printf("Value: %d\n", num());
-    
-    PFNPRINT print = (PFNPRINT)GetProcAddress(module, "print");
+    FreeLibrary(dll);
 
-    print("Print Test...");
+    printf("Done!\n");
 
-    FreeLibrary(module);
-
-    return 0;
+    return EXIT_SUCCESS;
 }
