@@ -55,13 +55,15 @@ STATIC BOOL InitializeD3D9()
     if (D3D9.Module == NULL) { return FALSE; }
 
     D3D9.CheckFullscreen = GetProcAddress(D3D9.Module, "CheckFullscreen");
-    D3D9.Direct3DShaderValidatorCreate9 = GetProcAddress(D3D9.Module, "Direct3DShaderValidatorCreate9");
+    D3D9.Direct3DShaderValidatorCreate9 =
+        GetProcAddress(D3D9.Module, "Direct3DShaderValidatorCreate9");
     D3D9.PSGPError = GetProcAddress(D3D9.Module, "PSGPError");
     D3D9.PSGPSampleTexture = GetProcAddress(D3D9.Module, "PSGPSampleTexture");
     D3D9.D3DPERF_BeginEvent = GetProcAddress(D3D9.Module, "D3DPERF_BeginEvent");
     D3D9.D3DPERF_EndEvent = GetProcAddress(D3D9.Module, "D3DPERF_EndEvent");
     D3D9.D3DPERF_GetStatus = GetProcAddress(D3D9.Module, "D3DPERF_GetStatus");
-    D3D9.D3DPERF_QueryRepeatFrame = GetProcAddress(D3D9.Module, "D3DPERF_QueryRepeatFrame");
+    D3D9.D3DPERF_QueryRepeatFrame =
+        GetProcAddress(D3D9.Module, "D3DPERF_QueryRepeatFrame");
     D3D9.D3DPERF_SetMarker = GetProcAddress(D3D9.Module, "D3DPERF_SetMarker");
     D3D9.D3DPERF_SetOptions = GetProcAddress(D3D9.Module, "D3DPERF_SetOptions");
     D3D9.D3DPERF_SetRegion = GetProcAddress(D3D9.Module, "D3DPERF_SetRegion");
@@ -91,7 +93,7 @@ BOOL WINAPI DllMain(HINSTANCE hInst, DWORD dwReason, LPVOID lpReserved)
         {
             if (!InitializeD3D9()) { return FALSE; }
 
-            InitializeInjection();
+            if (!InitializeInjection()) { return FALSE; }
 
             break;
         }

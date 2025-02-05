@@ -41,7 +41,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\..\..\..\SDK\Detours\src"
-				PreprocessorDefinitions="_X86_"
+				PreprocessorDefinitions="_X86_, _CRT_SECURE_NO_DEPRECATE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -104,7 +104,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalIncludeDirectories="..\..\..\..\SDK\Detours\src"
-				PreprocessorDefinitions="_X86_"
+				PreprocessorDefinitions="_X86_, _CRT_SECURE_NO_DEPRECATE"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
@@ -156,6 +156,18 @@
 				RelativePath=".\Inject.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\VC6.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\VS2005.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Wrapper.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -163,7 +175,19 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\Common.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Configuration.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Inject.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Wrapper.h"
 				>
 			</File>
 		</Filter>

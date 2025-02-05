@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2024 Eugene Kirian
+Copyright (c) 2025 Eugene Kirian
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,22 +20,87 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#include "Configuration.h"
 #include "Inject.h"
+#include "Wrapper.h"
 
 #include <detours.h>
+
+#define BASE_ADDRESS        0x00400000
+
+#ifdef VS2005
+#define CREATE_GAME_ADDRESS 0x00403090
+
+// Parameters are passed in registers ESI & ECX.
+__declspec(naked) void CreateGameWrapper(void)
+{
+    __asm
+    {
+        push ecx;
+        push esi;
+
+        call CreateGameImplementation;
+        add  esp, 0x8;
+        ret;          // Return from the function!
+    };
+}
+
+#else
+#define CREATE_GAME_ADDRESS 0x004030A0
+
+// Parameters are passed on stack.
+int CreateGameWrapper(Game* self, char* name)
+{
+    // Note. The detour can point directly to
+    // the implementation function, given there
+    // is no need to transform the arguments storage.
+
+   return CreateGameImplementation(self, name);
+}
+#endif
+
+void* CreateGameFunction = NULL;
 
 BOOL IsInjectionAttached()
 {
     return DetourIsHelperProcess();
 }
 
+BOOL InitializeWrapper()
+{
+    exe = GetModuleHandleA(NULL);
+    lib = LoadLibraryA("lib.dll");
+
+    if (lib == NULL) { return FALSE; }
+
+    LibFuncs.GetAssetsContent =
+        (PFBGETASSETSCONTENT)GetProcAddress(lib, "GetAssetsContent");
+
+    return TRUE;
+}
+
 BOOL InitializeInjection()
 {
-    return DetourRestoreAfterWith();
+    if(!InitializeWrapper()) { return FALSE; }
+
+    DetourTransactionBegin();
+
+    CreateGameFunction =
+        (void*)((unsigned)exe + CREATE_GAME_ADDRESS - BASE_ADDRESS);
+
+    DetourAttach(&(PVOID)CreateGameFunction, CreateGameWrapper);
+
+    return DetourTransactionCommit() == NO_ERROR;
 }
 
 BOOL ReleaseInjection()
 {
-    // TODO
-    return TRUE;
+    DetourTransactionBegin();
+
+    if (CreateGameFunction != NULL)
+    {
+        DetourDetach(&(PVOID)CreateGameFunction, CreateGameWrapper);
+    }
+
+    return DetourTransactionCommit() == NO_ERROR;
 }
