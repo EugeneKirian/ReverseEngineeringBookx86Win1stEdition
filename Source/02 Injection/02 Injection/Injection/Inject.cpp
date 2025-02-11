@@ -27,12 +27,13 @@ SOFTWARE.
 
 #include <detours.h>
 
-#define BASE_ADDRESS        0x00400000
+#define BASE_ADDRESS                    0x00400000
 
 #ifdef VS2005
-#define CREATE_GAME_ADDRESS     0x00403090
-#define SET_HEALTH_ADDRESS      0x004012e0
-#define SET_MAX_HEALTH_ADDRESS  0x00401310
+#define CREATE_GAME_ADDRESS             0x00403090
+#define SET_HEALTH_ADDRESS              0x004012E0
+#define SET_MAX_HEALTH_ADDRESS          0x00401310
+#define VIRTUAL_FUNCTION_TABLE_ADDRESS  0x0040FA34
 
 // Parameters are passed in registers ESI & ECX.
 __declspec(naked) void CreateGameWrapper(void)
@@ -49,9 +50,10 @@ __declspec(naked) void CreateGameWrapper(void)
 }
 
 #else
-#define CREATE_GAME_ADDRESS     0x004030A0
-#define SET_HEALTH_ADDRESS      0x00401300
-#define SET_MAX_HEALTH_ADDRESS  0x00401330
+#define CREATE_GAME_ADDRESS             0x004030A0
+#define SET_HEALTH_ADDRESS              0x00401300
+#define SET_MAX_HEALTH_ADDRESS          0x00401330
+#define VIRTUAL_FUNCTION_TABLE_ADDRESS  0x0040F1D0
 
 // Parameters are passed on stack.
 int CreateGameWrapper(Game* self, char* name)
@@ -127,9 +129,35 @@ BOOL InitializeWrapper()
 void (BulletClass:: * BulletClassSetHealth)(int) = &BulletClass::SetHealth;
 void (BulletClass:: * BulletClassSetMaxHealth)(int) = &BulletClass::SetMaxHealth;
 
+BOOL InitializeVirtualFunctions()
+{
+    // Bullet Virtual Function Table
+    void** vfptr = (void**)
+        ((unsigned)exe + VIRTUAL_FUNCTION_TABLE_ADDRESS - BASE_ADDRESS);
+
+    // Change Memory Access Permissions
+    DWORD ex = 0;
+    if(!VirtualProtect(vfptr, 24 * sizeof(void*), PAGE_READWRITE, &ex))
+    {
+        return FALSE;
+    }
+
+    // SetHealth & SetMaxHealth
+
+    //vfptr[8]  = SetHealthWrapper;
+    //vfptr[10] = SetMaxHealthWrapper;
+
+    vfptr[8]    = *(void**)&BulletClassSetHealth;
+    vfptr[10]   = *(void**)&BulletClassSetMaxHealth;
+
+    return TRUE;
+}
+
 BOOL InitializeInjection()
 {
     if(!InitializeWrapper()) { return FALSE; }
+
+    if(!InitializeVirtualFunctions()) { return FALSE; }
 
     DetourTransactionBegin();
 
@@ -146,8 +174,8 @@ BOOL InitializeInjection()
     //DetourAttach(&(PVOID)SetHealthFunction, SetHealthWrapper);
     //DetourAttach(&(PVOID)SetMaxHealthFunction, SetMaxHealthWrapper);
 
-    DetourAttach(&(PVOID)SetHealthFunction, *(PVOID*)&BulletClassSetHealth);
-    DetourAttach(&(PVOID)SetMaxHealthFunction, *(PVOID*)&BulletClassSetMaxHealth);
+    //DetourAttach(&(PVOID)SetHealthFunction, *(PVOID*)&BulletClassSetHealth);
+    //DetourAttach(&(PVOID)SetMaxHealthFunction, *(PVOID*)&BulletClassSetMaxHealth);
 
     return DetourTransactionCommit() == NO_ERROR;
 }
@@ -162,8 +190,8 @@ BOOL ReleaseInjection()
         //DetourDetach(&(PVOID)SetHealthFunction, SetHealthWrapper);
         //DetourDetach(&(PVOID)SetMaxHealthFunction, SetMaxHealthWrapper);
         
-        DetourDetach(&(PVOID)SetHealthFunction, *(PVOID*)&BulletClassSetHealth);
-        DetourDetach(&(PVOID)SetMaxHealthFunction, *(PVOID*)&BulletClassSetMaxHealth);
+        //DetourDetach(&(PVOID)SetHealthFunction, *(PVOID*)&BulletClassSetHealth);
+        //DetourDetach(&(PVOID)SetMaxHealthFunction, *(PVOID*)&BulletClassSetMaxHealth);
     }
 
     return DetourTransactionCommit() == NO_ERROR;
