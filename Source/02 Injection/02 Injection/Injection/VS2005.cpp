@@ -25,6 +25,24 @@ SOFTWARE.
 
 #ifdef VS2005
 
+// Constructor              0x00401eb0
+// Virtual Function Table   0x0040fa34
+//struct BulletStruct
+
+// 0x0040fa34 + 0x20 (8)
+// 0x004012e0
+void __cdecl BulletStructSetHealth(BulletStruct* self, int value)
+{
+    self->Health = 10000000;
+}
+
+// 0x0040fa34 + 0x28 (10)
+// 0x00401310
+void __cdecl BulletStructSetMaxHealth(BulletStruct* self, int value)
+{
+    self->MaxHealth = 10000000;
+}
+
 // 0x004046D0
 int FUN_004046D0(void* assets, void* p2,
                  void* p3, AssetContent* content, void* p5)
@@ -63,7 +81,7 @@ int CreateGameImplementation(Game* self, char* name)
 
     AssetContent content;
 
-    int result = LibFuncs.GetAssetsContent(self->Assets, name, &content);
+    int result = LibFuncs.GetAssetsContent(self->Assets, scene, &content);
 
       if (-1 < result)
       {

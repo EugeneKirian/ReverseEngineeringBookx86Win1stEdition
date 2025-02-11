@@ -20,6 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#include "BulletClass.h"
 #include "Configuration.h"
 #include "Inject.h"
 #include "Wrapper.h"
@@ -29,7 +30,9 @@ SOFTWARE.
 #define BASE_ADDRESS        0x00400000
 
 #ifdef VS2005
-#define CREATE_GAME_ADDRESS 0x00403090
+#define CREATE_GAME_ADDRESS     0x00403090
+#define SET_HEALTH_ADDRESS      0x004012e0
+#define SET_MAX_HEALTH_ADDRESS  0x00401310
 
 // Parameters are passed in registers ESI & ECX.
 __declspec(naked) void CreateGameWrapper(void)
@@ -46,7 +49,9 @@ __declspec(naked) void CreateGameWrapper(void)
 }
 
 #else
-#define CREATE_GAME_ADDRESS 0x004030A0
+#define CREATE_GAME_ADDRESS     0x004030A0
+#define SET_HEALTH_ADDRESS      0x00401300
+#define SET_MAX_HEALTH_ADDRESS  0x00401330
 
 // Parameters are passed on stack.
 int CreateGameWrapper(Game* self, char* name)
@@ -59,7 +64,47 @@ int CreateGameWrapper(Game* self, char* name)
 }
 #endif
 
+__declspec(naked) void SetHealthWrapper(void)
+{
+    __asm
+    {
+        pop eax;
+        pop edx;  // Cannot use ebx in this case
+
+        push eax; // Return Address
+        push edx;
+        push ecx;
+
+        call BulletStructSetHealth;
+
+        add esp, 0x8;
+        
+        ret;
+    }
+}
+
+__declspec(naked) void SetMaxHealthWrapper(void)
+{
+    __asm
+    {
+        pop eax;
+        pop edx;
+
+        push eax; // Return Address
+        push edx;
+        push ecx;
+
+        call BulletStructSetMaxHealth;
+
+        add esp, 0x8;
+
+        ret;
+    }
+}
+
 void* CreateGameFunction = NULL;
+void* SetHealthFunction = NULL;
+void* SetMaxHealthFunction = NULL;
 
 BOOL IsInjectionAttached()
 {
@@ -79,6 +124,9 @@ BOOL InitializeWrapper()
     return TRUE;
 }
 
+void (BulletClass:: * BulletClassSetHealth)(int) = &BulletClass::SetHealth;
+void (BulletClass:: * BulletClassSetMaxHealth)(int) = &BulletClass::SetMaxHealth;
+
 BOOL InitializeInjection()
 {
     if(!InitializeWrapper()) { return FALSE; }
@@ -90,6 +138,17 @@ BOOL InitializeInjection()
 
     DetourAttach(&(PVOID)CreateGameFunction, CreateGameWrapper);
 
+    SetHealthFunction =
+        (void*)((unsigned)exe + SET_HEALTH_ADDRESS - BASE_ADDRESS);
+    SetMaxHealthFunction =
+        (void*)((unsigned)exe + SET_MAX_HEALTH_ADDRESS - BASE_ADDRESS);
+
+    //DetourAttach(&(PVOID)SetHealthFunction, SetHealthWrapper);
+    //DetourAttach(&(PVOID)SetMaxHealthFunction, SetMaxHealthWrapper);
+
+    DetourAttach(&(PVOID)SetHealthFunction, *(PVOID*)&BulletClassSetHealth);
+    DetourAttach(&(PVOID)SetMaxHealthFunction, *(PVOID*)&BulletClassSetMaxHealth);
+
     return DetourTransactionCommit() == NO_ERROR;
 }
 
@@ -100,6 +159,11 @@ BOOL ReleaseInjection()
     if (CreateGameFunction != NULL)
     {
         DetourDetach(&(PVOID)CreateGameFunction, CreateGameWrapper);
+        //DetourDetach(&(PVOID)SetHealthFunction, SetHealthWrapper);
+        //DetourDetach(&(PVOID)SetMaxHealthFunction, SetMaxHealthWrapper);
+        
+        DetourDetach(&(PVOID)SetHealthFunction, *(PVOID*)&BulletClassSetHealth);
+        DetourDetach(&(PVOID)SetMaxHealthFunction, *(PVOID*)&BulletClassSetMaxHealth);
     }
 
     return DetourTransactionCommit() == NO_ERROR;

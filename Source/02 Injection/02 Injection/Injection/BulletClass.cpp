@@ -20,35 +20,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Common.h"
+#include "BulletClass.h"
 
-#include <windows.h>
-
-extern HMODULE exe;
-extern HMODULE lib;
-
-typedef int (*PFBGETASSETSCONTENT)(void* assets,
-                                   char* name, AssetContent* content);
-
-struct LibFunctions
+void BulletClass::SetHealth(int value)
 {
-    PFBGETASSETSCONTENT GetAssetsContent;
-};
+    this->Health = 1000000;
+}
 
-extern LibFunctions LibFuncs;
-
-int CreateGameImplementation(Game* self, char* name);
-
-#pragma pack(push, 1)
-struct BulletStruct
+void BulletClass::SetMaxHealth(int value)
 {
-    void*   Self;
-    char    Unk00[0x8C];
-    int     Health;
-    int     MaxHealth;
-    char    Unk01[0x64];
-};
-#pragma pack(pop)
-
-void BulletStructSetHealth(BulletStruct* self, int value);
-void BulletStructSetMaxHealth(BulletStruct* self, int value);
+    this->MaxHealth = 1000000;
+}

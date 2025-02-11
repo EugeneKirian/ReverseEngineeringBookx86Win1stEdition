@@ -27,6 +27,24 @@ SOFTWARE.
 
 #ifdef VC6
 
+// Constructor              0x00401e00
+// Virtual Function Table   0x0040f1d0
+//struct BulletStruct
+
+// 0x0040f1d0 + 0x20 (8)
+// 0x00401300
+void __cdecl BulletStructSetHealth(BulletStruct* self, int value)
+{
+    self->Health = 10000000;
+}
+
+// 0x0040f1d0 + 0x28 (10)
+// 0x00401330
+void __cdecl BulletStructSetMaxHealth(BulletStruct* self, int value)
+{
+    self->MaxHealth = 10000000;
+}
+
 typedef int (* FUN_00404540PTR)(void* assets, void* p2,
                                 void* p3, AssetContent* content, void* p5);
 

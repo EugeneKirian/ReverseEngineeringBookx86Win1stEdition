@@ -20,35 +20,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Common.h"
-
-#include <windows.h>
-
-extern HMODULE exe;
-extern HMODULE lib;
-
-typedef int (*PFBGETASSETSCONTENT)(void* assets,
-                                   char* name, AssetContent* content);
-
-struct LibFunctions
-{
-    PFBGETASSETSCONTENT GetAssetsContent;
-};
-
-extern LibFunctions LibFuncs;
-
-int CreateGameImplementation(Game* self, char* name);
-
 #pragma pack(push, 1)
-struct BulletStruct
+class BulletClass
 {
+private:
     void*   Self;
     char    Unk00[0x8C];
     int     Health;
     int     MaxHealth;
     char    Unk01[0x64];
+public:
+    // Virtual functions do NOT work.
+    void SetHealth(int value);
+    void SetMaxHealth(int value);
 };
 #pragma pack(pop)
-
-void BulletStructSetHealth(BulletStruct* self, int value);
-void BulletStructSetMaxHealth(BulletStruct* self, int value);
