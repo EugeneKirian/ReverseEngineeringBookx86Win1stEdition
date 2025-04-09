@@ -41,7 +41,9 @@ With its focus on hands-on examples and practical applications, this book is an 
 All source code and compiled versions of example programs are available on GitHub, allowing you to follow along and practice your reverse engineering skills on numerous example applications. By the end of this book, you'll have the skills and confidence to tackle even the most complex reverse engineering challenges and take your understanding of Windows programming to the next level.
 
 ***
-Paperback: [https://www.amazon.com/dp/B0F46CYHZD](https://www.amazon.com/dp/B0F46CYHZD)
+Purchase on Amazon:
+1. Paperback: [https://www.amazon.com/dp/B0F46CYHZD](https://www.amazon.com/dp/B0F46CYHZD)
+2. Kindle: [https://www.amazon.com/dp/B0F48TJM3X](https://www.amazon.com/dp/B0F48TJM3X)
 ***
 
 #### Dependencies
