@@ -1,9 +1,11 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C619KV5Z)
 
-![Software Reverse Engineering](Cover.png)
+[![Software Reverse Engineering](Images/Cover.png)](https://www.amazon.com/dp/B0F46CYHZD)
+
 
 ## Software Reverse Engineering
 ### Navigating x86 Windows Applications with Ghidra
+
 
 Unlock the secrets of x86 Windows applications with this hands-on guide to software reverse engineering using Ghidra, the industry-leading reverse engineering tool. Through a series of practical examples and in-depth explanations, you'll gain a deep understanding of how to deconstruct and analyze 32-bit Windows applications written in C and C++.
 
@@ -39,12 +41,14 @@ With its focus on hands-on examples and practical applications, this book is an 
 All source code and compiled versions of example programs are available on GitHub, allowing you to follow along and practice your reverse engineering skills on numerous example applications. By the end of this book, you'll have the skills and confidence to tackle even the most complex reverse engineering challenges and take your understanding of Windows programming to the next level.
 
 ***
+Paperback: [https://www.amazon.com/dp/B0F46CYHZD](https://www.amazon.com/dp/B0F46CYHZD)
+***
 
 #### Dependencies
 
 The book relies on the following software:
-1. [Microsoft DirectX End-User Runtimes (June 2010)](https://www.microsoft.com/en-us/download/details.aspx?id=8109/)
-2. [Microsoft Detours](https://github.com/microsoft/Detours)
+1. [Microsoft Detours](https://github.com/microsoft/Detours)
+2. [Microsoft DirectX End-User Runtimes (June 2010)](https://www.microsoft.com/en-us/download/details.aspx?id=8109/)
 3. [Zlib](https://zlib.net/)
 
 ***
